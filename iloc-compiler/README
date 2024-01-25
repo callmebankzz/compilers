@@ -1,0 +1,57 @@
+//NAME: Tyra Cole
+//NETID: tjc6
+
+### How To Run Program
+1.  First of all, make sure that all aspects of this lab are ran on CLEAR.
+2.  To use the code included in tjc6.tar, unpack the tar file. It will create a directory named
+    "lab1" in the current directory. You can unpack the tar file by running the command: tar xvf tjc6.tar
+    This command should install a subtree that looks like this:
+        lab1/
+        |-- src/
+        |   |-- lab1/
+        |   |   |-- Category.java
+        |   |   |-- IRBuilder.java
+        |   |   |-- Main.java
+        |   |   |-- Operations.java
+        |   |   |-- Parser.java
+        |   |   |-- Scanner.java
+        |   |   |-- Token.java
+        |-- 412fe
+        |-- Makefile
+        |-- README
+3.  After the contents of the tar are unpacked, from the lab1/ directory, run 'make clean' and 'make build'
+    to clean up any old files of the project and to build the project. 
+4.  After the program is built, to run the front end, use the following command: ./412fe [flag(s)] filename, 
+    where the flags are defined as follows: 
+
+    #### Available Flags
+    -h = Display this help message.
+    -s = Print to stdout a list of the tokens that the scanner found.
+    -p = Scan, parse, build the intermediate representation and report any errors found.
+    -r = Print intermediate representation to stdout.
+
+    And the filename is the direct path to the file to be read by the front end.
+
+### Contents of the tar File
+1.  Category.java: Defines categories or types for the tokens in the ILOC language.
+
+2.  IRBuilder.java: Responsible for building and representing the Intermediate Representation (IR) of parsed ILOC operations.
+
+3.  Main.java: The program's entry point, handling command-line arguments, reading files, and initiating the scanning and parsing processes.
+
+4.  Operations.java: Represents individual ILOC operations, defining their structure and behavior.
+
+5.  Parser.java: Parses tokens into ILOC operations, checking for valid syntax and constructing an IR if successful.
+
+6.  Scanner.java: Scans the input source to identify and generate a list of tokens for the ILOC language.
+
+7.  Token.java: Represents individual tokens, each having specific attributes such as category and lexeme.
+
+8.  412fe: The executable or script that runs the main program, likely invoking the Main.java class.
+
+9.  Makefile: A build automation file used for compiling and running the project.
+
+10. README: Is this file that you are reading. It provides an overview, instructions, and other essential details about my lab1 submission.
+
+### Change User Permissions
+While the execution permissions for 412fe should already be set, in the event that they are not, run the following command from the lab1/ directory: chmod a+x 412fe
